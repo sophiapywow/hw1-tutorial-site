@@ -1,33 +1,33 @@
-const myImage = document.querySelector("img");
+const myLastRead = document.getElementById('lastRead');
 
-myImage.onclick = () => {
-    const mySrc = myImage.getAttribute("src");
-    if (mySrc === "images/download.jpg") {
-        myImage.setAttribute("src", "images/firefox2.jpg");
-    }
-    else {
-        myImage.setAttribute("src", "images/download.jpg");
-    }
+myLastRead.onclick = () => {
+    document.getElementById('clickCover').style.display = "none";
+    document.getElementById('rating').style.display = "block";
 };
 
-let myButton = document.querySelector("button");
+let currReadButton = document.getElementById("crButton");
+let lastReadButton = document.getElementById('lrButton');
 let myHeading = document.querySelector("h1");
 
-function setUserName() {
-    const myName = prompt("Please enter your name.");
-    if (!myName) {
-        setUserName();
-    } else {
-        localStorage.setItem("name", myName);
-        myHeading.textContent = `Mozilla is cool, ${myName}`;
-    }
+function showCurrRead() {
+
+    document.getElementById('currRead')
+        .style.display = "block";
+    document.getElementById('crButton')
+        .style.display = "none";
 }
 
-if (!localStorage.getItem("name")) {
-    const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Mozilla is cool, ${storedName}`;
+currReadButton.onclick = () => {
+    showCurrRead();
 }
 
-myButton.onclick = () => {
-    setUserName();
+function showLastRead() {
+
+    myLastRead.style.display = "block";
+    document.getElementById('lrButton').style.display = "none";
+    document.getElementById('clickCover').style.display = "block";
+}
+
+lastReadButton.onclick = () => {
+    showLastRead();
 }

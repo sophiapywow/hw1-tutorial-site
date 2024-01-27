@@ -1,7 +1,9 @@
 html {
-    font-size: 10px; /* base font size is 10 pixels high */
-    font-family: "Open Sans", sans-serif; 
-    background-color: #00539f;
+    font-family: "Playfair Display", serif; 
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgba(187, 167, 225, 0.5);
   }
   
   h1 {
@@ -9,26 +11,40 @@ html {
     text-align: center;
     margin: 0;
     padding: 20px 0;
-    color: #00539f;
-    text-shadow: 3px 3px 1px black;
+    color: #513487;
+    text-shadow: 2px 2px 1px white;
+  }
+
+  h2 {
+    font-size: 25px;
+    color: #513487;
   }
   
   p,
   li {
     font-size: 16px;
+    color: rgba(8, 0, 25, 0.83);
     line-height: 2;
     letter-spacing: 1px;
   }
   
   body {
-    width: 600px;
+    width: 850px;
     margin: 0 auto;
-    background-color: #ff9500;
+    background-color: #bba7e1;
     padding: 0 20px 20px 20px;
-    border: 5px solid black;
+    border: 5px solid white;
   }
   
   img {
     display: block;
     margin: 0 auto;
+  }
+
+  #currRead {
+    display: none;
+  }
+
+  #lastRead {
+    display: none;
   }
